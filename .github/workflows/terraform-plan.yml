@@ -22,4 +22,4 @@ jobs:
     - name: Terraform Plan
       run: terraform plan
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
