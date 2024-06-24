@@ -21,6 +21,9 @@ jobs:
       env:
         TF_HTTP_PASSWORD: ${{ secrets.TOKEN }}
 
+    - name: Terraform Validate
+      run: terraform validate
+
     - name: Terraform Plan
       run: terraform plan
       env:
