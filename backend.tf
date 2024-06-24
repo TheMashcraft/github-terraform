@@ -7,3 +7,4 @@ terraform {
     unlock_method  = "DELETE"
     username       = "TheRealMashcraft/github-terraform"
   }
+}
