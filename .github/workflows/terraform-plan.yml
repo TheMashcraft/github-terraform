@@ -16,8 +16,14 @@ jobs:
       with:
         terraform_version: 1.5.2  # Use the appropriate Terraform version
 
+#    - name: TFstate.dev Backend Config
+#      shell: bash
+#      run: export TF_HTTP_PASSWORD="${{ secrets.TOKEN }}"
+
     - name: Terraform Init
       run: terraform init
+      env:
+        TF_HTTP_PASSWORD: ${{ secrets.TOKEN }}
 
     - name: Terraform Plan
       run: terraform plan
