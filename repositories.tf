@@ -9,7 +9,7 @@ resource "github_branch_protection_v3" "main" {
   for_each = var.repositories
 
   repository     = github_repository.repos[each.key].name
-  pattern        = "main"
+  branch         = "main"
   enforce_admins = true
 
   required_status_checks {
