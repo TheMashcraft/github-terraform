@@ -6,11 +6,16 @@ resource "github_repository" "repos" {
   auto_init   = true
 }
 
+resource "github_branch" "main"{
+  for_each    = var.repositories
+  repository  = github_repository.repos[each.key].name
+  branch      = "main"
+}
+
 resource "github_branch_default" "default"{
   for_each    = var.repositories
   repository  = github_repository.repos[each.key].name
   branch      = "main"
-  rename      = true
 }
 
 resource "github_branch_protection_v3" "main" {
