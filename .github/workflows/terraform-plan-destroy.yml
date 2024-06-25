@@ -1,10 +1,9 @@
-name: Terraform Plan
+name: Terraform Apply
 
 on:
   push:
-    branches-ignore:
-      - main
-      - destroy
+    branches:
+      - plan/destroy
 
 jobs:
   terraform:
@@ -27,8 +26,8 @@ jobs:
     - name: Terraform Validate
       run: terraform validate
 
-    - name: Terraform Plan
-      run: terraform plan
+    - name: Terraform Plan Destroy
+      run: terraform plan -destroy
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
