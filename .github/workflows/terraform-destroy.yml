@@ -33,7 +33,9 @@ jobs:
 
     - name: Manual Intervention step
       uses: trstringer/manual-approval@v1
-      timeout-minutes: 60
+      with:
+        secret: ${{ github.TOKEN }}
+        timeout-minutes: 60
 
     - name: Terraform Destroy
       run: terraform destroy -auto-approve
