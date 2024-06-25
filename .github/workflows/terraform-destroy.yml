@@ -30,3 +30,4 @@ jobs:
       run: terraform destroy -auto-approve
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
+

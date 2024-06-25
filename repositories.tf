@@ -11,3 +11,4 @@ resource "github_branch_default" "default"{
   repository  = github_repository.repos[each.key].name
   branch      = "main"
 }
+
