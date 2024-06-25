@@ -3,7 +3,7 @@ name: Terraform Apply
 on:
   push:
     branches:
-      - destroy
+      - plan/destroy
 
 jobs:
   terraform:
@@ -28,11 +28,6 @@ jobs:
 
     - name: Terraform Plan Destroy
       run: terraform plan -destroy
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
-
-    - name: Terraform Destroy
-      run: terraform destroy -auto-approve
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
 
