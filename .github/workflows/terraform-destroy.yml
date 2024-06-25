@@ -36,6 +36,7 @@ jobs:
       with:
         secret: ${{ github.TOKEN }}
         timeout-minutes: 60
+        approvers: TheMashcraft
 
     - name: Terraform Destroy
       run: terraform destroy -auto-approve
