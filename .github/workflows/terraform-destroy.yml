@@ -26,6 +26,15 @@ jobs:
     - name: Terraform Validate
       run: terraform validate
 
+    - name: Terraform Plan Destroy
+      run: terraform plan -destroy
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+    - name: Manual Intervention step
+      uses: trstringer/manual-approval@v1
+      timeout-minutes: 60
+
     - name: Terraform Destroy
       run: terraform destroy -auto-approve
       env:
