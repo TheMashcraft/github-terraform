@@ -35,3 +35,5 @@ jobs:
       run: terraform apply -auto-approve
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+        
