@@ -15,5 +15,9 @@ repositories = {
     description = "Turtle-Watching terraform infrastructure to deploy EC2"
     visibility  = "public"
   }
+  "terraform-reusable-workflows" = {
+    description = "Github reuseable workflows for deploying terraform"
+    visibility  = "public"
+  }
 }
 
