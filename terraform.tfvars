@@ -19,5 +19,17 @@ repositories = {
     description = "Github reuseable workflows for deploying terraform"
     visibility  = "public"
   }
+  "bitcoin-price-prediction" = {
+    description = "Bitcoin price prediction"
+    visibility  = "public"
+  }
+  "metaplanet-prediction" = {
+    description = "Metaplanet metric prediction"
+    visibility  = "public"
+  }
+  "bitcoin-hodl" = {
+    description = "Bitcoin hodl justification"
+    visibility  = "public"
+  }  
 }
 
