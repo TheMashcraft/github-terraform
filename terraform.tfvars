@@ -30,6 +30,10 @@ repositories = {
   "bitcoin-hodl" = {
     description = "Bitcoin hodl justification"
     visibility  = "public"
-  }  
+  }
+  "turtle-watching-ts-njs-react" = {
+    description = "Turtle Watching - A Typescript React Next.js application to show the best time to see Sea Turtles in Jupiter, Florida"
+    visibility  = "public"
+  } 
 }
 
